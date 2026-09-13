@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Master - Match the Tiles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧩 Puzzle Master</h1>
+            <div class="stats">
+                <div class="stat">
+                    <span class="label">Score:</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Moves:</span>
+                    <span class="value" id="moves">0</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Time:</span>
+                    <span class="value" id="timer">00:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="controls">
+            <button class="btn" id="newGameBtn">New Game</button>
+            <button class="btn" id="hintBtn">Get Hint</button>
+            <button class="btn" id="resetBtn">Reset</button>
+        </div>
+
+        <div class="difficulty">
+            <h3>Difficulty:</h3>
+            <button class="difficulty-btn active" data-level="easy">Easy (4x4)</button>
+            <button class="difficulty-btn" data-level="medium">Medium (6x6)</button>
+            <button class="difficulty-btn" data-level="hard">Hard (8x8)</button>
+        </div>
+
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="modalTitle">🎉 Level Complete!</h2>
+                <p id="modalMessage"></p>
+                <button class="btn" id="nextLevelBtn">Next Level</button>
+                <button class="btn" id="modalCloseBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
